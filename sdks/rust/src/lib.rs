@@ -12,7 +12,7 @@
 
 mod callbacks;
 mod client_cache;
-mod compression;
+pub mod compression;
 mod db_connection;
 mod metrics;
 mod spacetime_module;

@@ -36,7 +36,7 @@ pub(crate) fn maybe_decompress_cqu(cqu: CompressableQueryUpdate<BsatnFormat>) ->
 
 /// Decompresses a `ServerMessage` encoded in BSATN into the raw BSATN
 /// for further deserialization.
-pub(crate) fn decompress_server_message(raw: &[u8]) -> Result<Cow<'_, [u8]>, WsError> {
+pub fn decompress_server_message(raw: &[u8]) -> Result<Cow<'_, [u8]>, WsError> {
     let err_decompress = |scheme| {
         move |source| WsError::Decompress {
             scheme,

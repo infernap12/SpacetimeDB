@@ -193,11 +193,13 @@ where
     fn unsubscribe(self) -> crate::Result<()>;
 }
 
+#[derive(Debug)]
 pub struct WithBsatn<Row> {
     pub bsatn: Bytes,
     pub row: Row,
 }
 
+#[derive(Debug)]
 pub struct TableUpdate<Row> {
     pub inserts: Vec<WithBsatn<Row>>,
     pub deletes: Vec<WithBsatn<Row>>,
